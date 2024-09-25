@@ -1,0 +1,45 @@
+/* APPLICATION */
+.all_page{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.title_app{
+  text-align: center;
+  padding: 10px;
+}
+
+.div_title_top_bar{
+  text-align: center;
+  height: 20%;
+}
+
+.top_bar{
+  text-align: center;
+  padding: 10px;
+}
+
+.button_page{
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.container{
+  height: 75%;
+  width: 100%;
+  text-align: center;
+}
+
+.bot_bar{
+  height: 5%     ;
+}
+
+.content_bot_bar{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+  
