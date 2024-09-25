@@ -19,7 +19,7 @@ app.layout = html.Div([
     html.Div([
         title,
         top_bar],
-                className="div_title_top_bar"),
+        className="div_title_top_bar"),
 
     html.Div([dash.page_container],className="container"),
 
@@ -29,6 +29,7 @@ app.layout = html.Div([
 
 
 # --- APP START ---
-app.run_server()
+if __name__ == "__main__":
+    app.run_server(debug=False)
 
 
