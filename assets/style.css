@@ -7,7 +7,7 @@
 
 .title_app{
   text-align: center;
-  padding: 10px;
+  padding: 1%;
 }
 
 .div_title_top_bar{
@@ -17,12 +17,12 @@
 
 .top_bar{
   text-align: center;
-  padding: 10px;
+  padding: 1%;
 }
 
 .button_page{
   text-align: center;
-  padding: 20px;
+  padding: 1%;
   position: relative;
 }
 
