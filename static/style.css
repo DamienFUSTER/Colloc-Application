@@ -1,0 +1,13 @@
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
