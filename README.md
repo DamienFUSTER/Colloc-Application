@@ -15,7 +15,8 @@ Hebergeur web: ?
 - [x] Creation de l'appplication minimale
 - [x] Creation répertoire GitHub
 - [x] Essai de déployement de l'application avec Render
-- [ ] Changement de package back-end Dash -> Flask
+- [x] Changement de package back-end Dash -> Flask
+- [x] Définition du style front end (inspiration "little sesame")
 - [ ] Développement application front end
 - [ ] Optimisation de l'application et finalisation
 - [ ] Deployement avec Serveur perso ?
