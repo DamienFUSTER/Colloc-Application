@@ -1,30 +1,38 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Flask App{% endblock %}</title>
+    <title>{% block title %}Colloque{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-    <div class="container">
-      <div class="header">
+    <!-- Header -->
+    <header class="header">
         <div class="title">
-            <H1> Colloque AgroBioTech </H1>
+            <h1>Colloque AgroBioTech</h1>
         </div>
-        <div class="nav-buttons">
-            <a href="/">Présentation colloque</a>
-            <a href="/pres_inter">Présentation intervenants</a>
-            <a href="/links">Liens utiles</a>
-        </div>
-        
-      </div>
+        <nav class="nav-buttons">
+            <a href="/">Présentation Colloque</a>
+            <a href="/pres_inter">Présentation Intervenants</a>
+            <a href="/links">Liens Utiles</a>
+        </nav>
+    </header>
 
-        {% block content %}{% endblock %}
-    </div>
+    <!-- Main Content -->
+    <main class="content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Colloque AgroBioTech. Tous droits réservés.</p>
+    </footer>
 </body>
 
 </html>
+

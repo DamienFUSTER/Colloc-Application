@@ -1,35 +1,201 @@
 
-
-.header {
-  margin-top: 2%;
-  display: flex;
-  background-color: rgb(0, 90, 135);
-}
-
-.nav-buttons {
-    display: flex;
-    align-items: center;
-}
-
-.nav-buttons a {
-    text-decoration: none;
-    margin: 5px;
-    padding: 10px 20px;
-    color: rgb(230, 230, 230);
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
-
-.title {
-  margin-left: 10%;
-  color: rgb(230, 230, 230);
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 20px;
-}
-
+/* Styles généraux */
 body {
   background-color: rgb(210, 224, 253);
   margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* En-tête */
+.header {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(0, 90, 135);
+  flex-wrap: wrap; /* Pour permettre le retour à la ligne sur petits écrans */
+}
+
+.title {
+  color: rgb(230, 230, 230);
+  font-size: 20px;
+  text-align: center;
+  flex: 1 1 auto; /* S'adapte automatiquement à l'espace disponible */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  flex-wrap: wrap; /* Pour empiler les boutons sur petits écrans */
+}
+
+.nav-buttons a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: rgb(230, 230, 230);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.nav-buttons a:hover {
+  background-color: rgb(0, 70, 100);
+}
+
+/* Section principale */
+.content-section {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+/* Titres */
+.content-section h2 {
+  color: rgb(0, 90, 135);
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.content-section h3 {
+  color: rgb(50, 70, 120);
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Paragraphes et listes */
+.content-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgb(50, 50, 50);
+}
+
+.content-section ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.content-section ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Liste des intervenants */
+.intervenants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.intervenant {
+  background-color: rgb(240, 248, 255);
+  padding: 15px;
+  border: 1px solid rgb(200, 220, 240);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.intervenant h3 {
+  font-size: 18px;
+  color: rgb(0, 90, 135);
+  margin-bottom: 10px;
+}
+
+.intervenant p {
+  font-size: 14px;
+  color: rgb(60, 60, 60);
+}
+
+/* Liste des liens */
+.links-list {
+  padding-left: 20px;
+}
+
+.links-list li {
+  margin-bottom: 10px;
+}
+
+.links-list a {
+  text-decoration: none;
+  color: rgb(0, 90, 135);
+  transition: color 0.3s ease;
+}
+
+.links-list a:hover {
+  color: rgb(0, 70, 100);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  /* Ajustement de l'en-tête pour mobile */
+  .header {
+    flex-direction: column; /* Les éléments passent en colonne */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .title {
+    text-align: left; /* Alignement du titre à gauche */
+    margin-bottom: 10px;
+  }
+
+  .nav-buttons {
+    justify-content: center; /* Centrer les boutons sur petits écrans */
+  }
+
+  .nav-buttons a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  /* Section principale */
+  .content-section {
+    padding: 15px;
+    margin: 10px;
+    max-width: 95%; /* Prend presque toute la largeur */
+  }
+
+  .content-section h2 {
+    font-size: 20px;
+  }
+
+  .content-section p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Plus petits écrans */
+  .nav-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+
+  .nav-buttons a {
+    text-align: center; /* Centrer les liens */
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .content-section h2 {
+    font-size: 18px;
+  }
+
+  .content-section p {
+    font-size: 13px;
+  }
+}
+
+
+img {
+    max-width: 100%; /* Limite la largeur de l'image à 100% de l'élément parent */
+    height: auto;    /* Garde les proportions de l'image */
 }

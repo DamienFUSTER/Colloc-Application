@@ -1,8 +1,17 @@
+
 {% extends 'base.html' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Liens Utiles{% endblock %}
 
 {% block content %}
-    <h1>Bienvenue sur la page des liens</h1>
-    <p>voici les liens utiles (j'espère)</p>
+<section class="content-section">
+    <h2>Liens Utiles</h2>
+    <ul class="links-list">
+        <li><a href="https://www.agroparistech.fr/" target="_blank">Site officiel d'AgroParisTech</a></li>
+        <li><a href="https://www.agroparistech.fr/sites/default/files/media/2024-04/palaiseau_-_plan_dacces.pdf" target="_blank">Plan AgroParisTech</a></li>
+        <li><a href="https://www.inra.fr/" target="_blank">Institut National de la Recherche Agronomique (INRAE)</a></li>
+        <li><a href="https://github.com/DamienFUSTER/Colloc-Application" target="_blank">Page GitHub du site</a></li>
+    </ul>
+</section>
 {% endblock %}
+

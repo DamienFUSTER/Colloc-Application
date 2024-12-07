@@ -1,8 +1,22 @@
+
 {% extends 'base.html' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Présentation du Colloque{% endblock %}
 
 {% block content %}
-    <h1>Présentaiton planing colloc</h1>
-    <p>Ceci est une page de présentation.</p>
+<section class="content-section">
+    <h2>Vers un meilleur des mondes ? <BR> Les BioTechnologies au cœur de l'amélioration du vivant</h2>
+    <h2> Jeudi 6 février 2025 <h2>
+    <p>
+        Les biotechnologies transforment notre rapport au vivant : soigner, nourrir, préserver… et parfois dépasser les limites naturelles. Promesse d’un avenir meilleur pour certains, sujet de débats éthiques pour d’autres, elles interrogent autant qu’elles fascinent.
+    </p>
+    <p>
+        Quels enjeux, quels espoirs, quels risques ? Ce colloque explore les frontières entre innovation et responsabilité, pour imaginer ensemble le futur d’un monde en transformation. 
+    </p>
+    <p>
+        Et si l’avenir du vivant dépendait de nos choix d’aujourd’hui ?     
+    </p>
+    <img src="{{ url_for('static', filename='affiche.png') }}" />
+</section>
 {% endblock %}
+
