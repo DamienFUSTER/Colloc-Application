@@ -39,8 +39,8 @@ Ajout futur de formulaire ?
 - [x] Définition du style front end (inspiration "little sesame")
 - [x] Hebergement de l'application sur AWS EC2
 - [x] Mise ne place serveur DNS pour le nom de domaine colloque-agrobiotech.com 
-- [ ] Déployement protocole protection HTTPS 
-- [ ] Développement application front end après définition DA
+- [x] Déployement protocole protection HTTPS 
+- [x] Développement application front end après définition DA
 - [ ] Optimisation de l'application et finalisation
 - [ ] Deployement avec Serveur perso ?
 - [ ] Phase de test

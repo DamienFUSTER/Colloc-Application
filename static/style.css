@@ -1,61 +1,69 @@
+/* Importation d'une police moderne */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Styles généraux */
-body {
-  background-color: rgb(210, 224, 253);
+html, body {
+  background-color: #E3F2FD;
   margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* En-tête */
+/* En-tête modernisé */
 .header {
-  margin-top: 2%;
+  background-color: #0077B6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: rgb(0, 90, 135);
-  flex-wrap: wrap; /* Pour permettre le retour à la ligne sur petits écrans */
+  flex-wrap: wrap;
 }
 
-.title {
-  color: rgb(230, 230, 230);
-  font-size: 20px;
+/* Titre */
+.title h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
   text-align: center;
-  flex: 1 1 auto; /* S'adapte automatiquement à l'espace disponible */
+  flex-grow: 1;
 }
 
+/* Boutons de navigation */
 .nav-buttons {
   display: flex;
   gap: 10px;
-  flex: 1 1 auto;
-  justify-content: flex-end;
-  flex-wrap: wrap; /* Pour empiler les boutons sur petits écrans */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-buttons a {
-  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid white;
   padding: 10px 20px;
-  color: rgb(230, 230, 230);
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
   font-size: 16px;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-buttons a:hover {
-  background-color: rgb(0, 70, 100);
+  background-color: white;
+  color: #0077B6;
 }
 
-/* Section principale */
+/* Section principale avec effet de carte */
 .content-section {
   background-color: white;
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin: 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   max-width: 800px;
 }
 
-/* Titres */
 .content-section h2 {
   color: rgb(0, 90, 135);
   text-align: center;
@@ -76,18 +84,7 @@ body {
   margin-bottom: 20px;
   color: rgb(50, 50, 50);
 }
-
-.content-section ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-.content-section ul li {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-/* Liste des intervenants */
+/* Intervenants avec effet au survol */
 .intervenants-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -95,22 +92,16 @@ body {
 }
 
 .intervenant {
-  background-color: rgb(240, 248, 255);
+  background-color: #F1F8FF;
   padding: 15px;
-  border: 1px solid rgb(200, 220, 240);
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.intervenant h3 {
-  font-size: 18px;
-  color: rgb(0, 90, 135);
-  margin-bottom: 10px;
-}
-
-.intervenant p {
-  font-size: 14px;
-  color: rgb(60, 60, 60);
+.intervenant:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Liste des liens */
@@ -118,56 +109,65 @@ body {
   padding-left: 20px;
 }
 
-.links-list li {
-  margin-bottom: 10px;
-}
-
 .links-list a {
   text-decoration: none;
-  color: rgb(0, 90, 135);
+  color: #0077B6;
   transition: color 0.3s ease;
 }
 
 .links-list a:hover {
-  color: rgb(0, 70, 100);
+  color: #005A87;
+}
+
+/* Pied de page amélioré */
+.footer {
+  background-color: #0077B6;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto; /* Pousse le footer en bas */
+  width: 100%;
 }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
-  /* Ajustement de l'en-tête pour mobile */
+  /* En-tête en colonne sur petits écrans */
   .header {
-    flex-direction: column; /* Les éléments passent en colonne */
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .title {
-    text-align: left; /* Alignement du titre à gauche */
-    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .nav-buttons {
-    justify-content: center; /* Centrer les boutons sur petits écrans */
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
   }
 
   .nav-buttons a {
     font-size: 14px;
-    padding: 8px 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
   }
 
-  /* Section principale */
+  /* Contenu plus large sur mobile */
   .content-section {
-    padding: 15px;
+    padding: 20px;
     margin: 10px;
-    max-width: 95%; /* Prend presque toute la largeur */
+    max-width: 95%;
+    flex: 1;
   }
 
   .content-section h2 {
     font-size: 20px;
+    flex: 1;
   }
 
   .content-section p {
     font-size: 14px;
+    flex: 1;
   }
 }
 
@@ -180,22 +180,24 @@ body {
   }
 
   .nav-buttons a {
-    text-align: center; /* Centrer les liens */
     font-size: 14px;
-    padding: 10px;
+    padding: 12px;
   }
 
   .content-section h2 {
     font-size: 18px;
+    flex: 1;
   }
 
   .content-section p {
     font-size: 13px;
+    flex: 1;
   }
 }
 
-
+/* Images responsives */
 img {
-    max-width: 100%; /* Limite la largeur de l'image à 100% de l'élément parent */
-    height: auto;    /* Garde les proportions de l'image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
